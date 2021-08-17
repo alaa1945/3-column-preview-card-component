@@ -1,0 +1,112 @@
+@import url("(https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.google.com/specimen/Big+Shoulders+Display");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* Main Section */
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 10px auto;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  width: 90%;
+  max-width: 300px;
+  height: 700px;
+  padding: 30px;
+  line-height: 1.6rem;
+}
+.sedans {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: hsl(31, 77%, 52%);
+}
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+img {
+  margin: 10px;
+}
+h1 {
+  margin: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+p {
+  padding: 20px;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+.learn {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  font-weight: 500;
+  color: hsla(0, 0%, 100%, 0.75);
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+/* End Main Section */
+
+/* Media Query */
+@media (min-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+  }
+  .sedans,
+  .luxury,
+  .suvs {
+    height: 70%;
+    width: 300px;
+    border-radius: 0;
+  }
+  .sedans {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .luxury {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  p {
+    line-height: 1.7rem;
+    font-weight: 200;
+    margin-bottom: 60px;
+  }
+
+  .learn {
+    font-size: 1rem;
+
+    color: currentColor;
+    background-color: hsla(0, 0%, 100%, 0.75);
+  }
+}
+/* End Media Query */
